@@ -90,9 +90,9 @@ vi /data/myid
 vi /etc/hosts
 
 # hosts 파일 내용
-{broker1 이름} {broker1 주소}
-{broker2 이름} {broker2 주소}
-{broker3 이름} {broker3 주소}
+{broker1 주소} {broker1 이름}
+{broker2 주소} {broker2 이름}
+{broker3 주소} {broker3 이름}
 ```
 
 5. 편리한 실행을 위한 systemd 등록
