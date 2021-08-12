@@ -148,7 +148,7 @@ ln -s kafka_2.13-2.6.0 kafka
 ```bash
 vi {KAFKA_HOME}/config/server.properties
 
-# 파일에서 해당 부분만 수정
+# 파일에서 해당 부분 수정
 
 broker.id=0	#브로커 마다 unique하게 주면 됨
 
@@ -160,6 +160,13 @@ zookeeper.connect=localhost:2181
 # 클러스터의 경우
 zookeeper.connect={브로커1 주소}:2181,{브로커2 주소}:2181,{브로커3 주소}:2181/{지노드 이름}
 ex) zookeeper.connect=kafka1:2181,kafka2:2181,kafka3:2181/mykafka
+
+# 추가 사항
+delete.topic.enable=true
+
+# 아래는 따로 수정 안해도 되는거 같은데 DE위키에 존재
+listeners=PLAINTEXT://:9092
+advertised.listeners=PLAINTEXT://{브로커 주소}:9092
 ```
 
 3. 카프카 실행
